@@ -67,7 +67,7 @@ const playMusic = (track, pause=false)=>{
 		play.src = "./assets/images/pause.svg";
 	}
 
-	document.querySelector(".songinfo").innerHTML = track.replaceAll(".mp3","").replaceAll("-"," ");
+	document.querySelector(".songinfo").innerHTML = typeof track === "string"  ? track.replaceAll(".mp3", "").replaceAll("-", " ")  : "Unknown Track";
 	document.querySelector(".songtime").innerHTML = "00:00";
 }
 
