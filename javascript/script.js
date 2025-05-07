@@ -61,7 +61,7 @@ async function getsongs(folder) {
 
 //playMusic ka function
 const playMusic = (track, pause=false)=>{ 
-	currentSong.src = `/${currFolder}/` + track;
+	currentSong.src = `./${currFolder}/` + track;
 	if(!pause){
 		currentSong.play();
 		play.src = "./assets/images/pause.svg";
@@ -98,7 +98,7 @@ async function displayAlbums() {
 
 			let response = await metadataFetch.json();
 			// console.log(response);
-			const imgSrc =  `/Audios/${folder}/img.jpg`
+			const imgSrc =  `./Audios/${folder}/img.jpg`
 			cardsHTML += `<div data-folder="${folder}" class="card">
             <img src="${imgSrc}" alt="">
             <h3>${response.title}</h3>
