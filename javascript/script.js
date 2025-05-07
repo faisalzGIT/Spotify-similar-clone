@@ -203,9 +203,9 @@ async function main() {
 	volumeKaBtn.addEventListener("click", () => {
     	if (currentSong.muted) {
         	currentSong.muted = false;
-        	volumeKaBtn.src = "../assets/images/highVolume.svg"; // Mute icon
+        	volumeKaBtn.src = "./assets/images/highVolume.svg"; // Mute icon
     	} else {
-			volumeKaBtn.src = "../assets/images/noVolume.svg"; // Unmute icon
+			volumeKaBtn.src = "./assets/images/noVolume.svg"; // Unmute icon
 			currentSong.muted = true;
     	}
 	});
@@ -223,11 +223,11 @@ async function main() {
 		currentSong.muted = false; // Unmute the audio
 
 		if(volumeValue === 0){
-			volumeKaBtn.src = "../assets/images/noVolume.svg"; // muted icon
+			volumeKaBtn.src = "./assets/images/noVolume.svg"; // muted icon
 		} else if(volumeValue <= 0.5){
-			volumeKaBtn.src = "../assets/images/lowVolume.svg"; // low volume icon
+			volumeKaBtn.src = "./assets/images/lowVolume.svg"; // low volume icon
 		} else {
-			volumeKaBtn.src = "../assets/images/highVolume.svg"; // high volume icon
+			volumeKaBtn.src = "./assets/images/highVolume.svg"; // high volume icon
 		}	
 	})
 
