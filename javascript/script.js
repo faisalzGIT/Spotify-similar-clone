@@ -43,7 +43,7 @@ async function getsongs(folder) {
 			</div>
 			<div class="playnow">
 				<span>PLAY NOW</span>
-				<img src="/assets/images/play.svg" alt="playnowkisvg">
+				<img src="./assets/images/play.svg" alt="playnowkisvg">
 			</div>
 		</li>`
 	}   
@@ -64,7 +64,7 @@ const playMusic = (track, pause=false)=>{
 	currentSong.src = `/${currFolder}/` + track;
 	if(!pause){
 		currentSong.play();
-		play.src = "/assets/images/pause.svg";
+		play.src = "./assets/images/pause.svg";
 	}
 
 	document.querySelector(".songinfo").innerHTML = track.replaceAll(".mp3","").replaceAll("-"," ");
@@ -104,7 +104,7 @@ async function displayAlbums() {
             <h3>${response.title}</h3>
             <p>${response.description}</p>
             <div class="play">
-                <img src="/assets/images/greenBtn.svg" alt="green button">
+                <img src="./assets/images/greenBtn.svg" alt="green button">
             </div>
         </div>`;
 		}	
@@ -132,10 +132,10 @@ async function main() {
 	play.addEventListener("click",()=>{
 		if(currentSong.paused){
 			currentSong.play();
-			play.src = "/assets/images/pause.svg"
+			play.src = "./assets/images/pause.svg"
 		} else{
 			currentSong.pause();
-			play.src = "/assets/images/play.svg"
+			play.src = "./assets/images/play.svg"
 		}
 	})
 
@@ -238,10 +238,10 @@ async function main() {
 			event.preventDefault(); // Prevent scrolling when pressing the spacebar
 				if(currentSong.paused){
 					currentSong.play();
-					play.src = "/assets/images/pause.svg"
+					play.src = "./assets/images/pause.svg"
 				} else{
 					currentSong.pause();
-					play.src = "/assets/images/play.svg"
+					play.src = "./assets/images/play.svg"
 				}
 		}
 	})
