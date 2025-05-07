@@ -73,7 +73,7 @@ const playMusic = (track, pause=false)=>{
 
 //display all the albums
 async function displayAlbums() { 
-	let a = await fetch(`Audios`);
+	let a = await fetch(`./Audios`);
 	let response = await a.text();
 
 	let div = document.createElement("div")
@@ -93,7 +93,7 @@ async function displayAlbums() {
 			//get the meta data of the folder
 			console.log("the folder:"+ folder);
 			
-			let metadataFetch = await fetch(`Audios/`+folder+`/info.json`);
+			let metadataFetch = await fetch(`./Audios/`+folder+`/info.json`);
 			console.log(`Fetching from: Audios/${folder}/info.json`);
 
 			let response = await metadataFetch.json();
